@@ -31,9 +31,9 @@ InGateway文档网站导航
             <h3 style="width:auto;">英文文档</h3>
           </div>
           <ul>
-          <li><a href="http://fw.ig.inhandnetworks.com/en/latest/">Firmware documentation</a></li>
-          <li><a href="http://sdk.ig.inhandnetworks.com/en/latest/">Python developer documentation</a></li>
-          <li><a href="http://docker.ig.inhandnetworks.com/en/latest/">Docker user manual</a></li>
+          <li><a href="http://fw.ig.inhandnetworks.com/en/latest/">Firmware Documentation</a></li>
+          <li><a href="http://sdk.ig.inhandnetworks.com/en/latest/">Python Developer Documentation</a></li>
+          <li><a href="http://docker.ig.inhandnetworks.com/en/latest/">Docker User Manual</a></li>
           </ul>
         </td>
       </tr>
