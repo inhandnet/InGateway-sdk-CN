@@ -39,7 +39,9 @@ InGateway文档网站导航
       </tr>
     </table>
 
-北京映翰通网络技术股份有限公司的InGateway系列产品包含两个大的产品系列，InGateway902和InGateway501系列，通常InGateway501简称为“IG501”；InGateway902简称为“IG902”。MobiusPi是InGateway系列产品二次开发平台的名称。
+北京映翰通网络技术股份有限公司的InGateway系列产品包含两个大的产品系列，InGateway902和InGateway501系列，通常InGateway501简称为“IG501”；InGateway902简称为“IG902”。
+
+MobiusPi是InGateway系列产品二次开发平台的名称。
 
 .. toctree::
    :maxdepth: 2
