@@ -28,7 +28,7 @@ InGateway文档网站导航
         </td>
         <td>
           <div style="display:inline-block;">
-            <h3 style="width:auto;">英文文档</h3>
+            <h3 style="width:auto;">English Documentation</h3>
           </div>
           <ul>
           <li><a href="http://fw.ig.inhandnetworks.com/en/latest/">Firmware Documentation</a></li>
