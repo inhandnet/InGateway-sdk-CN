@@ -122,8 +122,8 @@ None
   ```  
 
 - 返回值说明
-  - ok：MobiusPi重启成功
-  - failed：MobiusPi重启失败
+  - `ok`：MobiusPi重启成功
+  - `failed`：MobiusPi重启失败
 
 <a id="cellularapi"> </a>  
 
@@ -216,26 +216,26 @@ None
   ```  
 
 - 返回值说明
-  - active_sim(string)：当前 SIM 卡
-  - imei_code(string)：IMEI 号码,未获取到时返回`空字符串`
-  - imsi_code(string)：IMSI 号码,未获取到时返回`空字符串`
-  - iccid_code(string)：ICCID 号码,未获取到时返回`空字符串`
-  - phone_number(string)：电话号码,未获取到时返回`空字符串`
-  - signal_level(int)：信号值
-  - dbm(int)：dBm值
-  - rerp(int)：RSRP，预留参数
-  - rerq(int)：RSRQ，预留参数
-  - register_status(int)：注册状态
-    - 0：正在注册到网络
-    - 1：注册网络成功
-    - 5：注册网络成功，漫游状态
-    - 6：尚未注册到网络
-    - 7：未注册
-  - operator(string)：运营商,未获取到时返回`空字符串`
-  - apns(string)：APN，预留参数
-  - network_type(string)：网络类型,未获取到时返回`空字符串`
-  - lac(string)：位置区码,未获取到时返回`空字符串`
-  - cell_id(string)：小区 ID,未获取到时返回`空字符串`
+  - `active_sim`(string)：当前 SIM 卡
+  - `imei_code`(string)：IMEI 号码,未获取到时返回`空字符串`
+  - `imsi_code`(string)：IMSI 号码,未获取到时返回`空字符串`
+  - `iccid_code`(string)：ICCID 号码,未获取到时返回`空字符串`
+  - `phone_number`(string)：电话号码,未获取到时返回`空字符串`
+  - `signal_level`(int)：信号值
+  - `dbm`(int)：dBm值
+  - `rerp`(int)：RSRP，预留参数
+  - `rerq`(int)：RSRQ，预留参数
+  - `register_status`(int)：注册状态
+    - `0`：正在注册到网络
+    - `1`：注册网络成功
+    - `5`：注册网络成功，漫游状态
+    - `6`：尚未注册到网络
+    - `7`：未注册
+  - `operator`(string)：运营商,未获取到时返回`空字符串`
+  - `apns`(string)：APN，预留参数
+  - `network_type`(string)：网络类型,未获取到时返回`空字符串`
+  - `lac`(string)：位置区码,未获取到时返回`空字符串`
+  - `cell_id`(string)：小区 ID,未获取到时返回`空字符串`
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -273,15 +273,15 @@ None
   ```
 
 - 返回值说明
-  - status(int)：网络状态
-    - 0：未连接
-    - 1：已连接
-  - ip_addr(string)：IP 地址
-  - netmask(string)：子网掩码
-  - gateway(string)：网关
-  - dns(string)：DNS
-  - mtu(int)：MTU
-  - connect_time(int)：连接时间，单位为秒
+  - `status`(int)：网络状态
+    - `0`：未连接
+    - `1`：已连接
+  - `ip_addr`(string)：IP 地址
+  - `netmask`(string)：子网掩码
+  - `gateway`(string)：网关
+  - `dns`(string)：DNS
+  - `mtu`(int)：MTU
+  - `connect_time`(int)：连接时间，单位为秒
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -543,13 +543,13 @@ None
   ```  
 
 - 返回值说明
-  - gps_enable：GPS启用状态
-    - 0：未启用
-    - 1：启用
-  - gps_time：定位时间
-  - latitude：纬度，未获取到时返回`空字符串`
-  - longitude：经度，未获取到时返回`空字符串`
-  - speed：速度
+  - `gps_enable`：GPS启用状态
+    - `0`：未启用
+    - `1`：启用
+  - `gps_time`：定位时间
+  - `latitude`：纬度，未获取到时返回`空字符串`
+  - `longitude`：经度，未获取到时返回`空字符串`
+  - `speed`：速度
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -580,11 +580,11 @@ print("io_list: %s " % io_list)
 sdi = io.setup_digital_io(io_name="di0", mode=DIGITAL_DRY_CONTACT_MODE)
 print("sdi: %s" % sdi)
 
-# read io 
+# 获取指定IO状态
 ri0 = io.read_io(io_name="di0")
 print("ri0: %s" % ri0)
 
-#write_io
+# 修改数字量输出IO的状态
 io.write_io(io_name="do0", value=DRY_CONTACT_HIGH_VALUE)
 ro0 = io.read_io(io_name="do0")
 print("ro0: %s" % ro0)
@@ -651,7 +651,7 @@ KeyError: 'Connection Timeout'
 你可以使用该方法获取指定IO的类型、模式等信息。
 
 ##### 请求参数
-- io_name：IO名称  
+- `io_name`：IO名称  
 
 ##### 返回
 - 返回类型  
@@ -670,26 +670,26 @@ KeyError: 'Connection Timeout'
   ```  
 
 - 返回值说明  
-  - index：索引号
-  - name：IO名称
-  - type：IO类型
-    - digital input：数字量输入
-    - digital output：数字量输出
-    - analog input：模拟量输入
-  - mode：IO模式
+  - `index`：索引号
+  - `name`：IO名称
+  - `type`：IO类型
+    - `digital input`：数字量输入
+    - `digital output`：数字量输出
+    - `analog inpu`t：模拟量输入
+  - `mode`：IO模式
     - 数字量输入IO
-      - wetcontact：湿接点
-      - drycontact：干接点
-      - shutdown：关闭
+      - `wetcontact`：湿接点
+      - `drycontact`：干接点
+      - `shutdown`：关闭
     - 数字量输出IO
-      - connect：闭合
-      - break：断开
+      - `connect`：闭合
+      - `break`：断开
     - 模拟量输入IO
-      - 0_20mA：对应0-20mA
-      - 4_20mA：对应4-20mA
-      - 0_5V：对应0-5V
-      - 0_10V：对应0-10V
-      - shutdown：关闭
+      - `0_20mA`：对应0-20mA
+      - `4_20m`A：对应4-20mA
+      - `0_5V`：对应0-5V
+      - `0_10`V：对应0-10V
+      - `shutdown`：关闭
 
 ##### 异常
 - io_name为错误的IO名称时（如`dd1`），返回如下错误：
@@ -763,26 +763,26 @@ None
   ```  
 
 - 返回值说明  
-  - index：索引号
-  - name：IO名称
-  - type：IO类型
-    - digital input：数字量输入
-    - digital output：数字量输出
-    - analog input：模拟量输入
-  - mode：IO模式
+  - `index`：索引号
+  - `name`：IO名称
+  - `type`：IO类型
+    - `digital input`：数字量输入
+    - `digital output`：数字量输出
+    - `analog inpu`t：模拟量输入
+  - `mode`：IO模式
     - 数字量输入IO
-      - wetcontact：湿接点
-      - drycontact：干接点
-      - shutdown：关闭
+      - `wetcontact`：湿接点
+      - `drycontact`：干接点
+      - `shutdown`：关闭
     - 数字量输出IO
-      - connect：闭合
-      - break：断开
+      - `connect`：闭合
+      - `break`：断开
     - 模拟量输入IO
-      - 0_20mA：对应0-20mA
-      - 4_20mA：对应4-20mA
-      - 0_5V：对应0-5V
-      - 0_10V：对应0-10V
-      - shutdown：关闭
+      - `0_20mA`：对应0-20mA
+      - `4_20m`A：对应4-20mA
+      - `0_5V`：对应0-5V
+      - `0_10`V：对应0-10V
+      - `shutdown`：关闭
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -797,11 +797,11 @@ KeyError: 'Connection Timeout'
 你可以使用该方法设置指定数字量输入IO的模式。
 
 ##### 请求参数
-- io_name：IO名称<font color=#FF0000>（仅支持设置数字量输入IO）</font>  
-- mode：数字量输入IO模式
-  - DIGITAL_DRY_CONTACT_MODE：干接点模式
-  - DIGITAL_WET_CONTACT_MODE：湿接点模式
-  - SHUT_DOWN_MODE：关闭
+- `io_name`：IO名称<font color=#FF0000>（仅支持设置数字量输入IO）</font>  
+- `mode`：数字量输入IO模式
+  - `DIGITAL_DRY_CONTACT_MODE`：干接点模式
+  - `DIGITAL_WET_CONTACT_MODE`：湿接点模式
+  - `SHUT_DOWN_MODE`：关闭
 
 ##### 返回
 - 返回类型  
@@ -820,14 +820,14 @@ KeyError: 'Connection Timeout'
   ```  
 
 - 返回值说明  
-  - index：索引号
-  - name：IO名称
-  - type：IO类型
-    - digital input：数字量输入
-  - mode：IO模式
-    - wetcontact：湿接点
-    - drycontact：干接点
-    - shutdown：关闭
+  - `index`：索引号
+  - `name`：IO名称
+  - `type`：IO类型
+    - `digital input`：数字量输入
+  - `mode`：IO模式
+    - `wetcontact`：湿接点
+    - `drycontact`：干接点
+    - `shutdow`n：关闭
 
 ##### 异常
 - io_name为错误的IO名称时（如`dd1`），返回如下错误：
@@ -862,13 +862,13 @@ KeyError: 'Connection Timeout'
 你可以使用该方法设置指定模拟量输入IO的模式。
 
 ##### 请求参数
-- io_name：IO名称<font color=#FF0000>（仅支持设置模拟量输入IO）</font>  
-- mode：模拟量输入IO模式
-  - ANALOG_LOW_A_MODE：0-20mA模式
-  - ANALOG_HIGH_A_MODE：4-20mA模式
-  - ANALOG_LOW_V_MODE：0-5V模式
-  - ANALOG_HIGH_V_MODE：0-10V模式
-  - SHUT_DOWN_MODE：关闭
+- `io_name`：IO名称<font color=#FF0000>（仅支持设置模拟量输入IO）</font>  
+- `mode`：模拟量输入IO模式
+  - `ANALOG_LOW_A_MODE`：0-20mA模式
+  - `ANALOG_HIGH_A_MODE`：4-20mA模式
+  - `ANALOG_LOW_V_MODE`：0-5V模式
+  - `ANALOG_HIGH_V_MODE`：0-10V模式
+  - `SHUT_DOWN_MODE`：关闭
 
 ##### 返回
 - 返回类型  
@@ -887,16 +887,16 @@ KeyError: 'Connection Timeout'
   ```  
 
 - 返回值说明  
-  - index：索引号
-  - name：IO名称
-  - type：IO类型
-    - analog input：模拟量输入
-  - mode：IO模式
-      - 0_20mA：对应0-20mA
-      - 4_20mA：对应4-20mA
-      - 0_5V：对应0-5V
-      - 0_10V：对应0-10V
-      - shutdown：关闭
+  - `index`：索引号
+  - `name`：IO名称
+  - `type`：IO类型
+    - `analog input`：模拟量输入
+  - `mode`：IO模式
+      - `0_20mA`：对应0-20mA
+      - `4_20mA`：对应4-20mA
+      - `0_5V`：对应0-5V
+      - `0_10V`：对应0-10V
+      - `shutdown`：关闭
 
 ##### 异常
 - io_name为错误的IO名称时（如`dd1`），返回如下错误：
@@ -931,7 +931,7 @@ KeyError: 'Connection Timeout'
 你可以使用该方法读取IO的状态。
 
 ##### 请求参数
-- io_name：IO名称  
+- `io_name`：IO名称  
 
 ##### 返回
 - 返回类型  
@@ -945,14 +945,14 @@ KeyError: 'Connection Timeout'
   ```  
 
 - 返回值说明  
-  - ON
+  - `ON`
     - 数字量输入IO的模式为湿接点且输入电压为+10~+30V时返回`ON`
     - 数字量输出IO为闭合状态时返回`ON`
-  - OFF：
+  - `OFF`：
     - 数字量输入IO的模式为湿接点且输入电压为0~+3V时返回`OFF`
     - 数字量输出IO为断开状态时返回`OFF`
-  - LOW：数字量输入IO的模式为干接点且断开时返回`LOW`
-  - HIGH：数字量输入IO的模式为干接点且闭合时返回`HIGH`
+  - `LOW`：数字量输入IO的模式为干接点且断开时返回`LOW`
+  - `HIGH`：数字量输入IO的模式为干接点且闭合时返回`HIGH`
   - 模拟量输入的电流或电压值
 
 ##### 异常
@@ -973,10 +973,10 @@ KeyError: 'Connection Timeout'
 你可以使用该方法修改数字量输出IO的状态。
 
 ##### 请求参数
-- io_name：数字量输出IO名称  
-- value：数字量输出IO的设定值
-  - DRY_CONTACT_LOW_VALUE：设置数字量输出IO断开
-  - DRY_CONTACT_HIGH_VALUE：设置数字量输出IO闭合
+- `io_name`：数字量输出IO名称  
+- `value`：数字量输出IO的设定值
+  - `DRY_CONTACT_LOW_VALUE`：设置数字量输出IO断开
+  - `DRY_CONTACT_HIGH_VALUE`：设置数字量输出IO闭合
 
 ##### 返回
 - 返回类型  
@@ -1081,8 +1081,8 @@ None
   ```
 
 - 返回值说明
-  - /dev/ttyO5：使用IG501时返回此数值
-  - /dev/ttyO1：使用IG902时返回此数值
+  - `/dev/ttyO5`：使用IG501时返回此数值
+  - `/dev/ttyO1`：使用IG902时返回此数值
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -1110,8 +1110,8 @@ None
   /dev/ttyO3
   ```
 - Return structure
-  - /dev/ttyO1：使用IG501时返回此数值
-  - /dev/ttyO3：使用IG902时返回此数值
+  - `/dev/ttyO1`：使用IG501时返回此数值
+  - `/dev/ttyO3`：使用IG902时返回此数值
 
 ##### 异常
 当请求超时时，返回如下错误：
@@ -1204,25 +1204,25 @@ None
   ```  
 
 - 返回值说明
-  - language：语言
-    - Chinese：中文
-    - English：英语
-  - hostname：MobiusPi名称 
-  - model_name：MobiusPi型号
-  - oem_name：oem名称
-  - serial_number：MobiusPi序列号
-  - mac_addr1：MobiusPi MAC地址1
-  - mac_addr2：MobiusPi MAC地址2
-  - firmware_version：固件版本
-  - bootloader_version：Bootloader版本
-  - product_number：产品编号
-  - description：产品描述
-  - auto_save：是否自动保存修改后的配置
-    - 0：未自动保存
-    - 1：自动保存
-  - encrypt_passwd：是否加密明文密码
-    - 0：未加密
-    - 1：加密
+  - `language`：语言
+    - `Chinese`：中文
+    - `English`：英语
+  - `hostname`：MobiusPi名称 
+  - `model_name`：MobiusPi型号
+  - `oem_name`：oem名称
+  - `serial_number`：MobiusPi序列号
+  - `mac_addr1`：MobiusPi MAC地址1
+  - `mac_addr2`：MobiusPi MAC地址2
+  - `firmware_version`：固件版本
+  - `bootloader_version`：Bootloader版本
+  - `product_number`：产品编号
+  - `description`：产品描述
+  - `auto_save`：是否自动保存修改后的配置
+    - `0`：未自动保存
+    - `1`：自动保存
+  - `encrypt_passwd`：是否加密明文密码
+    - `0`：未加密
+    - `1`：加密
 
 ##### 异常
 当请求超时时，返回如下错误：
