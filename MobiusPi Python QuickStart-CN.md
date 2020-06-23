@@ -90,28 +90,28 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 <a id="set-lan-network-parameters"> </a>  
 
 #### 1.1.2 设置LAN网络参数
-- 设置IG501LAN网络参数，请参考[在局域网访问IG501](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig501)。  
-- 设置IG902LAN网络参数，请参考[在局域网访问IG902](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig902)。
+- 设置IG501LAN网络参数，请参考[在局域网访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig501)。  
+- 设置IG902LAN网络参数，请参考[在局域网访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig902)。
 
 <a id="set-wan-network-parameters"> </a>  
 
 #### 1.1.3 设置WAN网络参数
-- 设置IG501 WAN网络参数，请参考[IG501连接Internet](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。  
-- 设置IG902 WAN网络参数，请参考[IG902连接Internet](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。
+- 设置IG501 WAN网络参数，请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。  
+- 设置IG902 WAN网络参数，请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。
 
 <a id="update-ingateway-device-software-version"> </a>  
 
 #### 1.1.4 更新软件版本
 如需获取MobiusPi最新软件版本及其功能特性信息，请联系客服。如需更新软件版本，请参考如下链接：  
-- [更新IG501软件版本](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)  
-- [更新IG902软件版本](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
+- [更新IG501软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)  
+- [更新IG902软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)
 
 <a id="enable-mobiuspi-debug-mode"> </a>  
 
 #### 1.1.5 启用MobiusPi的调试模式
 开发过程中，为了在MobiusPi上运行并调试Python代码，需要启用MobiusPi的调试模式。
-- [启用IG501调试模式](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id4)
-- [启用IG902调试模式](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id4)  
+- [启用IG501调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id4)
+- [启用IG902调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id4)  
 
 <a id="install-the-required-software-on-the-pc"> </a>  
 
@@ -418,8 +418,8 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 ### 2.5 通过MobiusPi Web页面部署App
 执行`main.py`脚本或构建App发布包命令后会自动在已连接的MobiusPi上生成对应的App,此App无法正常启动。请参考如下链接部署App至MobiusPi：  
-- [IG501部署App](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)  
-- [IG902部署App](https://ingateway-firmware-cn.readthedocs.io/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)
+- [IG501部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)  
+- [IG902部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#python-app)
 
 <a id="view-the-running-status-of-the-app"> </a>  
 
