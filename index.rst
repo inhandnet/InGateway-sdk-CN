@@ -22,7 +22,7 @@ InGateway文档网站导航
           <ul>
           <li><a href="http://manual.ig.inhand.com.cn/zh_CN/latest/">InGateway用户手册</a></li>
           <li><a href="http://sdk.ig.inhand.com.cn/zh_CN/latest/">Python开发者文档</a></li>
-          <li><a href="http://app.ig.inhand.com.cn/zh_CN/latest/">Device Supervisor说明文档</a></li>
+          <li><a href="http://app.ig.inhand.com.cn/zh_CN/latest/">DeviceSupervisor(数据采集与数据上云)</a></li>
           <li><a href="http://docker.ig.inhand.com.cn/zh_CN/latest/">Docker用户手册</a></li>
           </ul>
         </td>
@@ -33,7 +33,7 @@ InGateway文档网站导航
           <ul>
           <li><a href="http://manual.ig.inhandnetworks.com/en/latest/">InGateway User Manual</a></li>
           <li><a href="http://sdk.ig.inhandnetworks.com/en/latest/">Python Developer Documentation</a></li>
-          <li><a href="http://app.ig.inhandnetworks.com/en/latest/">Device Supervisor User Manual</a></li>
+          <li><a href="http://app.ig.inhandnetworks.com/en/latest/">Device Supervisor(Data collecting and uploading)</a></li>
           <li><a href="http://docker.ig.inhandnetworks.com/en/latest/">Docker User Manual</a></li>
           </ul>
         </td>
