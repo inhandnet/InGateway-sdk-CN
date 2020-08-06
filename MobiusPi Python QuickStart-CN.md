@@ -36,7 +36,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
   - [FAQ](#faq)
     - [建立SFTP连接时提示远程主机标识更新，认证失败](#remote-host-id-update)
     - [代码同步到远程服务器时提示“配置的身份验证方法失败”](#the-configured-authentication-method-failed)
-    - [在开发过程中如何调用IG902的串口和网口](#how-to-call-the-serial-port-and-network-port-of-ig900)
+    - [如何调用MobiusPi的串口和网口](#how-to-call-the-serial-port-and-network-port-of-ig900)
     - [与MobiusPi建立SFTP连接时提示“SSH错误”](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)
 
 <a id="build-a-mobiuspi-development-environment"> </a>  
@@ -558,7 +558,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 ## FAQ
 - [建立SFTP连接时提示远程主机标识更新，认证失败](#remote-host-id-update)
 - [代码同步到远程服务器时提示“配置的身份验证方法失败”](#the-configured-authentication-method-failed)
-- [在开发过程中如何调用IG902的串口和网口](#how-to-call-the-serial-port-and-network-port-of-ig900)
+- [如何调用MobiusPi的串口和网口](#how-to-call-the-serial-port-and-network-port-of-ig900)
 - [与MobiusPi建立SFTP连接时提示“SSH错误”](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)  
 
 <a id="remote-host-id-update"> </a>  
@@ -585,9 +585,9 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="how-to-call-the-serial-port-and-network-port-of-ig900"> </a>
 
-### Q3：在开发过程中如何调用IG902的串口和网口  
+### Q3：如何调用MobiusPi的串口和网口  
   
-  A3：RS485串口名称为：`/dev/ttyO3`；RS232串口名称为：`/dev/ttyO1`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
+  A3：IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
