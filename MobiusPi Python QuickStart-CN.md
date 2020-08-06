@@ -5,11 +5,11 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
   - [1. 搭建MobiusPi开发环境](#build-a-mobiuspi-development-environment)
     - [1.1 准备硬件设备及其网络环境](#prepare-hardware-equipment-and-its-network-environment)
       - [1.1.1 接通电源并使用网线连接PC](#turn-on-the-power-and-use-a-network-cable-to-connect-to-the-pc)
-      - [1.1.2 设置LAN网络参数](#set-lan-network-parameters)
-      - [1.1.3 设置WAN网络参数](#set-wan-network-parameters)
+      - [1.1.2 访问MobiusPi](#set-lan-network-parameters)
+      - [1.1.3 MobiusPi联网](#set-wan-network-parameters)
       - [1.1.4 更新软件版本](#update-ingateway-device-software-version)
       - [1.1.5 启用MobiusPi的调试模式](#enable-mobiuspi-debug-mode)
-    - [1.2 安装PC上需要的软件](#install-the-required-software-on-the-pc)
+    - [1.2 PC环境准备](#install-the-required-software-on-the-pc)
       - [1.2.1 安装Python解释器](#install-the-python-interpreter)
       - [1.2.2 安装Visual Studio Code软件](#install-visual-studio-code-software)
       - [1.2.3 安装OpenSSH](#install-openssh)
@@ -19,7 +19,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
       - [1.3.3 配置工程模板](#configure-project-template)
         - [1.3.3.1 使用映翰通标准工程模板](#use-yinghantong-standard-engineering-template)
         - [1.3.3.2 自定义工程模板](#custom-project-template)
-  - [2. 编写第一个MobiusPi App：Hello World](#write-the-mobiuspi-app-hello-world)
+  - [2. 编写一个MobiusPi App：Hello World](#write-the-mobiuspi-app-hello-world)
     - [2.1 使用模板创建工程](#create-a-project-using-a-template)
     - [2.2 编码](#coding)
     - [2.3 调试](#debug)
@@ -34,6 +34,10 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
       - [2.8.2 安装第三方依赖库至SDK](#install-third-party-dependent-libraries-to-sdk)
       - [2.8.3 启用代码自动补全](#enable-code-completion)
   - [FAQ](#faq)
+    - [建立SFTP连接时提示远程主机标识更新，认证失败](#remote-host-id-update)
+    - [代码同步到远程服务器时提示“配置的身份验证方法失败”](#the-configured-authentication-method-failed)
+    - [在开发过程中如何调用IG902的串口和网口](#how-to-call-the-serial-port-and-network-port-of-ig900)
+    - [与MobiusPi建立SFTP连接时提示“SSH错误”](#ssh-error-when-setting-up-sftp-connection-with-mobiuspi)
 
 <a id="build-a-mobiuspi-development-environment"> </a>  
 
@@ -59,7 +63,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 如果您的MobiusPi和PC已经满足了以上所有条件，则可以跳过这一小节。否则请参考以下说明准备开发环境。 
 
 - [1.1 准备硬件设备及其网络环境](#prepare-hardware-equipment-and-its-network-environment)
-- [1.2 安装PC上需要的软件](#install-the-required-software-on-the-pc)
+- [1.2 PC环境准备](#install-the-required-software-on-the-pc)
 - [1.3 准备VS Code开发环境](#prepare-vs-code-development-environment)
 
 <a id="prepare-hardware-equipment-and-its-network-environment"> </a>  
@@ -67,8 +71,8 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 ### 1.1 准备硬件设备及其网络环境
 
 - [1.1.1 接通电源并使用网线连接PC](#turn-on-the-power-and-use-a-network-cable-to-connect-to-the-pc)
-- [1.1.2 设置LAN网络参数](#set-lan-network-parameters)
-- [1.1.3 设置WAN网络参数](#set-wan-network-parameters)
+- [1.1.2 访问MobiusPi](#set-lan-network-parameters)
+- [1.1.3 MobiusPi联网](#set-wan-network-parameters)
 - [1.1.4 更新软件版本](#update-ingateway-device-software-version)
 - [1.1.5 启用MobiusPi的调试模式](#enable-mobiuspi-debug-mode)
  
@@ -89,15 +93,15 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="set-lan-network-parameters"> </a>  
 
-#### 1.1.2 设置LAN网络参数
-- 设置IG501LAN网络参数，请参考[在局域网访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig501)。  
-- 设置IG902LAN网络参数，请参考[在局域网访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig902)。
+#### 1.1.2 访问MobiusPi
+- 访问IG501，请参考[访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig501)。  
+- 访问IG902，请参考[访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#lan-ig902)。
 
 <a id="set-wan-network-parameters"> </a>  
 
-#### 1.1.3 设置WAN网络参数
-- 设置IG501 WAN网络参数，请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。  
-- 设置IG902 WAN网络参数，请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。
+#### 1.1.3 MobiusPi联网
+- 设置IG501联网请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。  
+- 设置IG902联网请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#wan-internet)。
 
 <a id="update-ingateway-device-software-version"> </a>  
 
@@ -115,7 +119,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="install-the-required-software-on-the-pc"> </a>  
 
-### 1.2 安装PC上需要的软件
+### 1.2 PC环境准备
 
 - [1.2.1 安装Python解释器](#install-the-python-interpreter)
 - [1.2.2 安装Visual Studio Code软件](#install-visual-studio-code-software)
@@ -265,7 +269,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="write-the-mobiuspi-app-hello-world"> </a>  
 
-## 2. 编写第一个MobiusPi App：Hello World
+## 2. 编写一个MobiusPi App：Hello World
 本教程以开发一个“HelloWorld”App为例说明如何通过VS Code实现MobiusPi Python App的开发。该App具备在MobiusPi中每10秒打印一条“hello world!”日志以及导入配置文件修改日志内容的功能。  
 
 - [2.1 使用模板创建工程](#create-a-project-using-a-template)
@@ -559,7 +563,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="remote-host-id-update"> </a>  
 
-- Q1:建立SFTP连接时提示远程主机标识更新，认证失败  
+### Q1:建立SFTP连接时提示远程主机标识更新，认证失败  
   
   ![](./images/2019-12-10-13-40-49.png)  
 
@@ -573,7 +577,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="the-configured-authentication-method-failed"> </a> 
 
-- Q2:建立SFTP连接后，在左侧空白处右键选择”Sync Local->Remote”将代码同步到远程服务器时提示“配置的身份验证方法失败”  
+### Q2:建立SFTP连接后，在左侧空白处右键选择”Sync Local->Remote”将代码同步到远程服务器时提示“配置的身份验证方法失败”  
   
   ![](images/2019-12-19-18-33-09.png)  
 
@@ -581,13 +585,13 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 <a id="how-to-call-the-serial-port-and-network-port-of-ig900"> </a>
 
-- Q3：在开发过程中如何调用IG902的串口和网口  
+### Q3：在开发过程中如何调用IG902的串口和网口  
   
   A3：RS485串口名称为：`/dev/ttyO3`；RS232串口名称为：`/dev/ttyO1`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
-- Q4：与MobiusPi建立SFTP连接时提示“SSH错误”，如下图所示：  
+### Q4：与MobiusPi建立SFTP连接时提示“SSH错误”，如下图所示：  
   
   ![](images/2020-04-21-20-25-55.png)  
 
