@@ -94,28 +94,28 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 <a id="set-lan-network-parameters"> </a>  
 
 #### 1.1.2 访问MobiusPi
-- 访问IG501，请参考[访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#lan-ig501)。  
-- 访问IG902，请参考[访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#lan-ig902)。
+- 访问IG501，请参考[访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-lan-parameters)。  
+- 访问IG902，请参考[访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-lan-parameters)。
 
 <a id="set-wan-network-parameters"> </a>  
 
 #### 1.1.3 MobiusPi联网
-- 设置IG501联网请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#wan-internet)。  
-- 设置IG902联网请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#wan-internet)。
+- 设置IG501联网请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-wan-parameters)。  
+- 设置IG902联网请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-wan-parameters)。
 
 <a id="update-ingateway-device-software-version"> </a>  
 
 #### 1.1.4 更新软件版本
 如需获取MobiusPi最新软件版本及其功能特性信息，请联系客服。如需更新软件版本，请参考如下链接：  
-- [更新IG501软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#id1)  
-- [更新IG902软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#id1)
+- [更新IG501软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#update-the-software)  
+- [更新IG902软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#update-the-software)
 
 <a id="enable-mobiuspi-debug-mode"> </a>  
 
 #### 1.1.5 启用MobiusPi的调试模式
 开发过程中，为了在MobiusPi上运行并调试Python代码，需要启用MobiusPi的调试模式。
-- [启用IG501调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#id4)
-- [启用IG902调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#id4)  
+- [启用IG501调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#enable-the-debug-mode)
+- [启用IG902调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#enable-the-debug-mode)  
 
 <a id="install-the-required-software-on-the-pc"> </a>  
 

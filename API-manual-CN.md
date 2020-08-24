@@ -61,7 +61,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在说
 <a id="installation"> </a>  
 
 ## 安装SDK
-映翰通提供包含`mobiuspi_lib`库的软件开发工具包（SDK），如需获取MobiusPi的SDK及其功能特性信息，请联系客服。安装和升级SDK请参考[IG902更新软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#id1)。  
+映翰通提供包含`mobiuspi_lib`库的软件开发工具包（SDK），如需获取MobiusPi的SDK及其功能特性信息，请联系客服。安装和升级SDK请参考[IG902更新软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#update-the-software)。  
 
 <a id="python-requirements"> </a>  
 
