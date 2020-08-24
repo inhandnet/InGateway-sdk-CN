@@ -1,7 +1,7 @@
 # MobiusPi API手册
 
   - [概述](#overview)
-  - [安装](#installation)
+  - [安装SDK](#installation)
   - [Python要求](#python-requirements)
   - [1. Basic](#basic)
     - [入门](#getting-started1)
@@ -60,8 +60,8 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在说
 
 <a id="installation"> </a>  
 
-## 安装
-映翰通提供包含`mobiuspi_lib`库的软件开发工具包（SDK），如需获取MobiusPi的SDK及其功能特性信息，请联系客服。安装和升级SDK请参考[IG902更新软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html#id1)。  
+## 安装SDK
+映翰通提供包含`mobiuspi_lib`库的软件开发工具包（SDK），如需获取MobiusPi的SDK及其功能特性信息，请联系客服。安装和升级SDK请参考[IG902更新软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#id1)。  
 
 <a id="python-requirements"> </a>  
 

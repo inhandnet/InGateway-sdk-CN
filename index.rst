@@ -49,4 +49,4 @@ MobiusPi是InGateway系列产品二次开发平台的名称。
    :caption: 开发者指南
 
    MobiusPi Python QuickStart-CN.md
-   API手册-CN.md
+   API-manual-CN.md
