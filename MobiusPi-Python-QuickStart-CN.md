@@ -381,18 +381,28 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
   ![](./images/2019-12-05-11-15-01.png)  
 
 - 步骤2：在终端窗口调试脚本  
+  - 方法一：使用ptvsd调试脚本
   
-  同步代码后在终端窗口输入如下命令在IG501中立即执行脚本，执行脚本后在终端窗口查看执行结果：打印“hello world!”。
-  ```
-  python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
-  ```
-  - `192.168.1.1`为`sftp.json`中“host”项配置的IP地址
-  - `3000`为建议的调试端口号
-  - `HelloWorld/src/main.py`为mian. py的执行路径，请根据您的当前位置适当调整  
+    同步代码后在终端窗口输入如下命令在IG501中立即执行脚本，执行脚本后在终端窗口查看执行结果：打印“hello world!”。<font color=#FF0000>注意：MobiusPi的Python开发环境默认不提供ptvsd依赖库，你可以参考[2.8.2 安装第三方依赖库至SDK](#install-third-party-dependent-libraries-to-sdk)自行安装。</font>  
+    ```
+    python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
+    ```
+    - `192.168.1.1`为`sftp.json`中“host”项配置的IP地址
+    - `3000`为建议的调试端口号
+    - `HelloWorld/src/main.py`为mian. py的执行路径，请根据您的当前位置适当调整  
 
-  MobiusPi的Python开发环境内置了ptvsd依赖库用于远程调试代码，想要了解更多ptvsd插件的用法，请访问[ptvsd使用说明](https://github.com/microsoft/ptvsd/)。  
+    想要了解更多ptvsd插件的用法，请访问[ptvsd使用说明](https://github.com/microsoft/ptvsd/)。  
 
-  ![](images/2019-12-23-14-59-40.png)  
+    ![](images/2019-12-23-14-59-40.png)  
+
+  - 方法二：直接运行脚本
+
+    同步代码后在终端窗口输入如下命令在IG501中立即执行脚本，执行脚本后在终端窗口查看执行结果：打印“hello world!”。（`HelloWorld/src/main.py`为mian. py的执行路径，请根据您的当前位置适当调整）
+    ```
+    python HelloWorld/src/main.py 
+    ```
+
+    ![](images/2020-09-03-16-58-21.png)  
 
 - 步骤3：调试完成后在终端使用`Ctrl + C`快捷键终止调试。  
 
