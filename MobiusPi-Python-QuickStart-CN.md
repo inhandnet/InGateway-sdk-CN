@@ -1,5 +1,5 @@
 # **MobiusPi Python开发快速入门**
-北京映翰通网络技术股份有限公司的InGateway系列产品包含两个大的产品系列，InGateway902和InGateway501系列，以下文档中将InGateway501简称为“IG501”；InGateway902简称为“IG902”。  </br>
+北京映翰通网络技术股份有限公司的InGateway系列产品包含三个大的产品系列，InGateway902，InGateway502和InGateway501系列，以下文档中将InGateway501简称为“IG501”；InGateway502简称为“IG502”；InGateway902简称为“IG902”。  </br>
 MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为用户说明如何利用MobiusPi进行基于Python的二次开发。
 
   - [1. 搭建MobiusPi开发环境](#build-a-mobiuspi-development-environment)
@@ -48,6 +48,10 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
     - 固件版本：V2.0.0.r12351及以上
     - SDK版本：py2sdk-V1.3.4及以上
     - 联网并已启用调试模式
+  - InGateway502
+    - 固件版本：V2.0.0.r13771及以上
+    - SDK版本：py3sdk-V1.3.5及以上
+    - 联网并已启用调试模式
   - InGateway902
     - 固件版本：V2.0.0.r12537及以上
     - SDK版本：py3sdk-V1.3.5及以上
@@ -85,6 +89,12 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
   ![](images/2020-02-20-09-25-01.png)  
 
+- 准备IG502硬件设备  
+  
+  接通IG502的电源并按照拓扑使用以太网线连接PC和IG502。  
+
+  ![](images/2021-04-06-14-22-35.png) 
+
 - 准备IG902硬件设备  
   
   接通IG902的电源并按照拓扑使用以太网线连接PC和IG902。  
@@ -95,12 +105,14 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 #### 1.1.2 访问MobiusPi
 - 访问IG501，请参考[访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-lan-parameters)。  
+- 访问IG502，请参考[访问IG502](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#set-lan-parameters)。  
 - 访问IG902，请参考[访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-lan-parameters)。
 
 <a id="set-wan-network-parameters"> </a>  
 
 #### 1.1.3 MobiusPi联网
 - 设置IG501联网请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-wan-parameters)。  
+- 设置IG502联网请参考[IG502连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#set-wan-parameters)。 
 - 设置IG902联网请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-wan-parameters)。
 
 <a id="update-ingateway-device-software-version"> </a>  
@@ -108,6 +120,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 #### 1.1.4 更新软件版本
 如需获取MobiusPi最新软件版本及其功能特性信息，请联系客服。如需更新软件版本，请参考如下链接：  
 - [更新IG501软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#update-the-software)  
+- [更新IG502软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#update-the-software) 
 - [更新IG902软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#update-the-software)
 
 <a id="enable-mobiuspi-debug-mode"> </a>  
@@ -115,6 +128,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 #### 1.1.5 启用MobiusPi的调试模式
 开发过程中，为了在MobiusPi上运行并调试Python代码，需要启用MobiusPi的调试模式。
 - [启用IG501调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#enable-the-debug-mode)
+- [启用IG502调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#enable-the-debug-mode)
 - [启用IG902调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#enable-the-debug-mode)  
 
 <a id="install-the-required-software-on-the-pc"> </a>  
@@ -337,6 +351,13 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
     ![](images/2020-02-18-08-59-54.png)  
 
+  - 配置IG502 SFTP连接  
+  
+    在`sftp.json`文件中根据“边缘计算 > Python边缘计算”页面的连接参数配置SFTP连接。
+  <font color=#FF0000>注意：Python App名称应与mian.py中的App名称保持一致。</font>  
+
+    ![](images/2021-04-06-14-34-44.png)  
+
   - 配置IG902 SFTP连接  
   
     在`sftp.json`文件中根据“边缘计算 > Python边缘计算”页面的连接参数配置SFTP连接。
@@ -383,7 +404,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 - 步骤2：在终端窗口调试脚本  
   - 方法一：使用ptvsd调试脚本
   
-    同步代码后在终端窗口输入如下命令在IG501中立即执行脚本，执行脚本后在终端窗口查看执行结果：打印“hello world!”。<font color=#FF0000>注意：MobiusPi的Python开发环境默认不提供ptvsd依赖库，你可以参考[2.8.2 安装第三方依赖库至SDK](#install-third-party-dependent-libraries-to-sdk)自行安装。</font>  
+    同步代码后在终端窗口输入如下命令在MobiusPi中立即执行脚本（以IG501为例），执行脚本后在终端窗口查看执行结果：打印“hello world!”。<font color=#FF0000>注意：MobiusPi的Python开发环境默认不提供ptvsd依赖库，你可以参考[2.8.2 安装第三方依赖库至SDK](#install-third-party-dependent-libraries-to-sdk)自行安装。</font>  
     ```
     python -m ptvsd --host 192.168.1.1 --port 3000 HelloWorld/src/main.py 
     ```
@@ -397,7 +418,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
   - 方法二：直接运行脚本
 
-    同步代码后在终端窗口输入如下命令在IG501中立即执行脚本，执行脚本后在终端窗口查看执行结果：打印“hello world!”。（`HelloWorld/src/main.py`为mian. py的执行路径，请根据您的当前位置适当调整）
+    同步代码后在终端窗口输入如下命令在MobiusPi中立即执行脚本（以IG501为例），执行脚本后在终端窗口查看执行结果：打印“hello world!”。（`HelloWorld/src/main.py`为mian. py的执行路径，请根据您的当前位置适当调整）
     ```
     python HelloWorld/src/main.py 
     ```
@@ -433,6 +454,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 ### 2.5 通过MobiusPi Web页面部署App
 执行`main.py`脚本或构建App发布包命令后会自动在已连接的MobiusPi上生成对应的App,此App无法正常启动。请参考如下链接部署App至MobiusPi：  
 - [IG501部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#python-app)  
+- [IG502部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#python-app) 
 - [IG902部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#python-app)
 
 <a id="view-the-running-status-of-the-app"> </a>  
@@ -597,7 +619,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 ### Q3：如何调用MobiusPi的串口和网口  
   
-  A3：IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
+  A3：IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG502的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
