@@ -675,7 +675,7 @@ KeyError: 'Connection Timeout'
   - `type`：IO类型
     - `digital input`：数字量输入
     - `digital output`：数字量输出
-    - `analog inpu`t：模拟量输入
+    - `analog input`：模拟量输入
   - `mode`：IO模式
     - 数字量输入IO
       - `wetcontact`：湿接点
@@ -768,7 +768,7 @@ None
   - `type`：IO类型
     - `digital input`：数字量输入
     - `digital output`：数字量输出
-    - `analog inpu`t：模拟量输入
+    - `analog input`：模拟量输入
   - `mode`：IO模式
     - 数字量输入IO
       - `wetcontact`：湿接点
