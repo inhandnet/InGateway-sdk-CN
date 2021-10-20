@@ -1,5 +1,5 @@
 # **MobiusPi Python开发快速入门**
-北京映翰通网络技术股份有限公司的InGateway系列产品包含三个大的产品系列，InGateway902，InGateway502和InGateway501系列，以下文档中将InGateway501简称为“IG501”；InGateway502简称为“IG502”；InGateway902简称为“IG902”。  </br>
+北京映翰通网络技术股份有限公司的InGateway系列产品包含三个大的产品系列，InGateway902，InGateway502和InGateway501系列，以下文档中将InGateway501简称为“IG501”；InGateway502简称为“IG502”；InGateway902简称为“IG902”；InGateway974简称为“IG974”。  </br>
 MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为用户说明如何利用MobiusPi进行基于Python的二次开发。
 
   - [1. 搭建MobiusPi开发环境](#build-a-mobiuspi-development-environment)
@@ -56,6 +56,10 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
     - 固件版本：V2.0.0.r12537及以上
     - SDK版本：py3sdk-V1.3.5及以上
     - 联网并已启用调试模式
+  - InGateway974
+    - 固件版本：V2.0.0.r14169及以上
+    - SDK版本：py3sdk-V1.4.5及以上
+    - 联网并已启用调试模式
 - PC
   - Python 2.7.X/3.7.X解释器
   - Visual Studio Code软件
@@ -101,12 +105,19 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
   ![](images/2020-02-17-17-53-43.png)  
 
+- 准备IG974硬件设备  
+  
+  接通IG974的电源并按照拓扑使用以太网线连接PC和IG974。  
+
+  ![](images/2021-10-14-18-02-47.png) 
+
 <a id="set-lan-network-parameters"> </a>  
 
 #### 1.1.2 访问MobiusPi
 - 访问IG501，请参考[访问IG501](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-lan-parameters)。  
 - 访问IG502，请参考[访问IG502](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#set-lan-parameters)。  
 - 访问IG902，请参考[访问IG902](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-lan-parameters)。
+- 访问IG974，请参考[访问IG974](http://manual.ig.inhand.com.cn/zh_CN/latest/IG974-Quick-Start-Manual-CN.html#set-lan-parameters)。
 
 <a id="set-wan-network-parameters"> </a>  
 
@@ -114,6 +125,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 - 设置IG501联网请参考[IG501连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#set-wan-parameters)。  
 - 设置IG502联网请参考[IG502连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#set-wan-parameters)。 
 - 设置IG902联网请参考[IG902连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#set-wan-parameters)。
+- 设置IG974联网请参考[IG974连接Internet](http://manual.ig.inhand.com.cn/zh_CN/latest/IG974-Quick-Start-Manual-CN.html#set-wan-parameters)。
 
 <a id="update-ingateway-device-software-version"> </a>  
 
@@ -122,6 +134,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 - [更新IG501软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#update-the-software)  
 - [更新IG502软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#update-the-software) 
 - [更新IG902软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#update-the-software)
+- [更新IG974软件版本](http://manual.ig.inhand.com.cn/zh_CN/latest/IG974-Quick-Start-Manual-CN.html#update-the-software)  
 
 <a id="enable-mobiuspi-debug-mode"> </a>  
 
@@ -130,6 +143,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 - [启用IG501调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#enable-the-debug-mode)
 - [启用IG502调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#enable-the-debug-mode)
 - [启用IG902调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#enable-the-debug-mode)  
+- [启用IG974调试模式](http://manual.ig.inhand.com.cn/zh_CN/latest/IG974-Quick-Start-Manual-CN.html#enable-the-debug-mode)  
 
 <a id="install-the-required-software-on-the-pc"> </a>  
 
@@ -364,7 +378,11 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
   <font color=#FF0000>注意：Python App名称应与mian.py中的App名称保持一致。</font>  
 
     ![](images/2020-02-18-09-03-28.png)  
-  
+
+  - 配置IG974 SFTP连接  
+
+    同IG902。
+
 - 步骤3：配置完成并保存后在命令面板中输入`>SFTP:Open SSH in Terminal`以连接远端的服务器。  
   
   ![](./images/2019-12-05-10-43-46.png)  
@@ -456,6 +474,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 - [IG501部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG501-Quick-Start-Manual-CN.html#python-app)  
 - [IG502部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#python-app) 
 - [IG902部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG902-Quick-Start-Manual-CN.html#python-app)
+- [IG974部署App](http://manual.ig.inhand.com.cn/zh_CN/latest/IG974-Quick-Start-Manual-CN.html#install-and-run-python-app)
 
 <a id="view-the-running-status-of-the-app"> </a>  
 
@@ -619,7 +638,12 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
 
 ### Q3：如何调用MobiusPi的串口和网口  
   
-  A3：IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG502的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`。串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
+  A3：
+  - IG974的RS485串口名称为：`/dev/ttyXRUSB0`，RS232串口名称为：`/dev/ttyXRUSB1`；
+  - IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；
+  - IG502的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；
+  - IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`；
+  - 串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
 
 <a id="ssh-error-when-setting-up-sftp-connection-with-mobiuspi"> </a>
 
