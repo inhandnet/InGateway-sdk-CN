@@ -641,6 +641,7 @@ MobiusPi是InGateway系列产品二次开发平台的名称，本文档旨在为
   A3：
   - IG974的RS485串口名称为：`/dev/ttyXRUSB0`，RS232串口名称为：`/dev/ttyXRUSB1`；
   - IG902的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；
+  - IG532的RS485串口名称为：COM1:`/dev/ttyO3`，COM2:：`/dev/ttyO4`，COM3:：`/dev/ttyO1`，COM4:：`/dev/ttyO2`；
   - IG502的RS485串口名称为：`/dev/ttyO3`，RS232串口名称为：`/dev/ttyO1`；
   - IG501的RS485串口名称为：`/dev/ttyO1`，RS232串口名称为：`/dev/ttyO5`；
   - 串口和网口均可以使用Python标准的串口/网口使用方法进行调用，如使用`pyserial`库调用串口。  
