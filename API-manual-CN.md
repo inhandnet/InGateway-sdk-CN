@@ -675,7 +675,7 @@ ri0: LOW
 ro0: ON
 ```
 
-<font color=#FF0000>注意：仅型号为IG902且IO支持AI的型号支持该API，其余型号获取IO状态详见[IO模块](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#io)。</font>  
+<font color=#FF0000>注意：仅型号为IG902且IO支持AI的设备支持该API，其余型号获取IO状态详见[IO模块](http://manual.ig.inhand.com.cn/zh_CN/latest/IG502-Quick-Start-Manual-CN.html#io)。</font>  
 
 <a id="io-use"> </a>  
 
